@@ -49,3 +49,15 @@ p {
 
 
 /** CODIGO AQUI **/
+@Media (min-width: 758px) {
+.con-side{ 
+    display: flex;
+    gap: 2rem;
+}   
+aside {
+    flex: 1;
+} 
+article {
+    flex: 3;
+}
+}
