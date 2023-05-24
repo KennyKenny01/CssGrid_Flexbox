@@ -49,3 +49,35 @@ p {
 
 
 /** CODIGO AQUI **/
+@Media (min-width: 768px) {
+.layaout-shifter {
+    display: grid;
+    grid-template-areas: "contenido"
+                         "inferior";
+}
+.sidebar {
+    grid-template-areas: inferior;
+}
+.contenido-principal{
+    grid-area: contenido;
+    display: grid;
+    grid-template-areas: "Entrada1 Entrada2";
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+}
+}
+@Media (min-width: 992px) {
+.layaout-shifter {
+    grid-template-areas: "contenido sidebar";
+    column-gap: 2rem;
+}
+.sidebar{
+    grid-area: sidebar;
+}
+.contenido-principal{
+    grid-area: contenido;
+    grid-template-areas: "Entrada1"
+                         "Entrada2";
+    grid-template-columns: unset;
+}
+}
